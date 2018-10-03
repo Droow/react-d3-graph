@@ -179,7 +179,7 @@ export default {
         symbolType: 'circle'
     },
     link: {
-        color: 'blue',
+        color: 'rgb(109,109,109)',
         highlightColor: 'red',
         opacity: 1,
         semanticStrokeWidth: false,
