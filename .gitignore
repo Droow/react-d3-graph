@@ -65,8 +65,7 @@ typings/
 
 # Project stuff
 #dist
-lib
-coverage
+#lib
 gen-docs
 .DS_Store
 cypress/videos/
