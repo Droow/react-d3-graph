@@ -28,11 +28,11 @@ import { buildLinkProps, buildNodeProps, getNodeCardinality } from './graph.help
  */
 function _buildLinks(nodes, links, linksMatrix, config, linkCallbacks, highlightedNode, highlightedLink, transform) {
     return links.filter(({ isHidden }) => !isHidden).map(link => {
-        const { source, target } = link;
+        const { source, target, label } = link;
         // FIXME: solve this source data inconsistency later
         const sourceId = source.id || source;
         const targetId = target.id || target;
-        const key = `${sourceId}${CONST.COORDS_SEPARATOR}${targetId}`;
+        const key = `${sourceId}${CONST.COORDS_SEPARATOR}${targetId}${CONST.COORDS_SEPARATOR}${label}`;
         const props = buildLinkProps(
             { ...link, source: `${sourceId}`, target: `${targetId}` },
             nodes,
